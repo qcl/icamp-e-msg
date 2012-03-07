@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:orientation="vertical" >
-    <TextView android:id="@+id/widget_text"
-        android:text="text"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#66ff0000" >
+
+    <Button
+        android:id="@+id/widget_btn_send_msg"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:enabled="false"
         android:layout_gravity="center_horizontal|center"
-        android:layout_marginTop="5dip"
-        android:padding="10dip"
-        />
+        android:text="@string/send_msg" />
+
+    <Button
+        android:id="@+id/widget_btn_open_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_lock" />
 
 </LinearLayout>

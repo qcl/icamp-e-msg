@@ -3,5 +3,7 @@
 
     <string name="hello">Hello World!</string>
     <string name="app_name">Emergency Messages</string>
+    <string name="send_msg">發送訊息</string>
+    <string name="open_lock">拔插銷</string>
 
 </resources>
