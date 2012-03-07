@@ -4,9 +4,17 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
+    <ListView
+        android:id="@+id/situationList"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_add_new_situation"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:text="@string/add_new_situation" android:drawableLeft="@android:drawable/ic_menu_add"/>
 
 </LinearLayout>

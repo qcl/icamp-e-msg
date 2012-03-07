@@ -6,13 +6,16 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 public class EMsgAppWidgetProvider extends AppWidgetProvider {
 
 	private static final String DBG_TAG = "EMsgAppWidgetProvider";
+	
 	protected static final String ON_CLICK_BTN = "onClickBtn";
 	protected static final String BTN_OPEN_LOCK = "btnOpenLock";
+	protected static final String BTN_CLOSE_LOCK = "btnCloseMsg";
 	protected static final String BTN_SEND_MSG = "btnSendMsg";
 	
 	@Override
@@ -26,16 +29,37 @@ public class EMsgAppWidgetProvider extends AppWidgetProvider {
 		for(int i=0;i<N;i++){
 			int appWidgetId = appWidgetIds[i];
 			
-			Intent intent = new Intent(context,EMsgWidgetService.class);
+			Log.d(DBG_TAG,appWidgetId+" onUpdate");
+			/*
+			//Intent intent = new Intent(context,EMsgWidgetService.class);
+			Intent intent = new Intent(context,EMsgWidgetLockActivity.class);
+			
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,appWidgetId);
 			intent.putExtra(ON_CLICK_BTN, BTN_OPEN_LOCK);
 			intent.setData(Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME)));
-			PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, 0);
+			
+			//PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, 0);
+			PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 			
 			RemoteViews views = new RemoteViews(context.getPackageName(),R.layout.widget_layout);
 			views.setOnClickPendingIntent(R.id.widget_btn_open_lock, pendingIntent);
 			
 			appWidgetManager.updateAppWidget(appWidgetId, views);
+			*/
+			
+			Intent intent = new Intent(context,EMsgWidgetService.class);
+			
+			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,appWidgetId);
+			intent.setData(Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME)));
+			
+			PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, 0);
+			
+			RemoteViews views = new RemoteViews(context.getPackageName(),R.layout.widget_layout);
+			views.setOnClickPendingIntent(R.id.widget_btn_send_msg, pendingIntent);
+			
+			appWidgetManager.updateAppWidget(appWidgetId, views);
+			
+			
 		}
 	}
 	

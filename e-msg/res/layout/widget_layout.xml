@@ -8,16 +8,9 @@
 
     <Button
         android:id="@+id/widget_btn_send_msg"
-        android:layout_width="100dip"
-        android:layout_height="100dip"
-        android:enabled="false"
+        android:layout_width="120dip"
+        android:layout_height="120dip"
         android:layout_gravity="center_horizontal|center"
         android:text="@string/send_msg" />
-
-    <Button
-        android:id="@+id/widget_btn_open_lock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/open_lock" />
 
 </LinearLayout>

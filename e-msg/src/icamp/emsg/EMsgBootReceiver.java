@@ -11,9 +11,9 @@ public class EMsgBootReceiver extends BroadcastReceiver {
 	
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		// TODO Auto-generated method stub
 		Log.d(DBG_TAG, "onReceive");
-
+		//start detect service on boot
+		context.startService(new Intent(context,EMsgDetectService.class));
 	}
 
 }

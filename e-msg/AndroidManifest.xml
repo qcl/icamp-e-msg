@@ -11,7 +11,8 @@
     
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name" 
+        android:name=".EMsgApplication" >
         <activity
             android:name=".EMsgMainActivity"
             android:label="@string/app_name" >
@@ -20,7 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+        <!-- 
+        <activity
+            android:name=".EMsgWidgetLockActivity"
+            android:label="@string/app_name" >
+        </activity>
+         -->
         <receiver android:name=".EMsgBootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -35,6 +41,8 @@
         </receiver>
         <service 
             android:name=".EMsgWidgetService" />
+        <service 
+            android:name=".EMsgDetectService" />
     </application>
 
 </manifest>

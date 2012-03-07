@@ -5,5 +5,10 @@
     <string name="app_name">Emergency Messages</string>
     <string name="send_msg">發送訊息</string>
     <string name="open_lock">拔插銷</string>
+    <string name="close_lock">關閉按鈕</string>
+    <string name="add_new_situation">新增情境</string>
+    <string name="edit">編輯</string>
+    <string name="targetGroup">緊急群組</string>
+    <string name="detect_service">停止危險偵測</string>
 
 </resources>
