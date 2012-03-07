@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/editList" android:icon="@android:drawable/ic_menu_edit" android:title="@string/edit"></item>
+    <item android:id="@+id/targetGroup" android:icon="@drawable/ic_menu_allfriends" android:title="@string/targetGroup"></item>
+    <item android:id="@+id/detectService" android:icon="@android:drawable/ic_menu_view" android:title="@string/detect_service"></item>
+    
+
+</menu>
