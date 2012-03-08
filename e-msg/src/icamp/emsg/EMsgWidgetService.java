@@ -56,7 +56,7 @@ public class EMsgWidgetService extends Service {
 		*/
 		
 		// send default e-msg
-		mEMsg.sendEMsg();
+		mEMsg.sendEMsg("ClickButtonOnAppWidget","qc1");
 		
 		return START_STICKY;
 	}
