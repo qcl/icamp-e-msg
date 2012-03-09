@@ -48,6 +48,9 @@ public class EMsgApplication extends Application {
 	protected void sendEMsg(String from, String to){
 		Log.d(DBG_TAG, "send MSG!!!!");
 		
+		//FIXME
+		//TODO Using thread!!!!
+		
 		if(from==""||from==null||from.equals("")){
 			from     = "mobile";
 		}

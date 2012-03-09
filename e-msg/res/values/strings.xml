@@ -8,7 +8,7 @@
     <string name="close_lock">關閉按鈕</string>
     <string name="add_new_situation">新增情境</string>
     <string name="edit">編輯</string>
-    <string name="targetGroup">緊急群組</string>
-    <string name="detect_service">停止危險偵測</string>
+    <string name="targetGroup">聯絡人群組</string>
+    <string name="detect_service">自動偵測</string>
 
 </resources>
